@@ -1,0 +1,164 @@
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: relative;
+  background: transparent;
+}
+
+.navbar-content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding-right: 5%;
+  justify-content: space-between;
+}
+.navbar-logo-left {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo {
+  margin-left: 1rem;
+}
+/* Fix logo style and shadow for both modes */
+.ecell-logo {
+  height: 100px;
+  width: auto;
+  border-radius: 8px;
+
+  padding: 4px 8px;
+}
+@media (prefers-color-scheme: light) {
+  .ecell-logo {
+    background: #f7f7fa;
+    box-shadow: 0 0 12px #ff6a00, 0 2px 8px rgba(0, 0, 0, 0.08);
+  }
+}
+@media (prefers-color-scheme: light) {
+  .ecell-logo {
+    background: rgba(255, 255, 255, 0.85);
+    box-shadow: 0 0 12px #ff6a00, 0 2px 8px rgba(0, 0, 0, 0.08);
+  }
+}
+
+.navbar-icons-container {
+  position: relative;
+  margin-left: auto;
+}
+
+.navbar-icons {
+  display: flex;
+  gap: 1.5rem;
+  position: relative;
+  padding-right: 2rem;
+}
+.icon {
+  width: 28px;
+  height: 28px;
+  display: inline-block;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: filter 0.3s;
+  filter: invert(1) brightness(100);
+}
+.light .icon {
+  filter: invert(0);
+}
+.icon.instagram {
+  background-image: url("https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg");
+}
+.icon.linkedin {
+  background-image: url("https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg");
+}
+.icon.whatsapp {
+  background-image: url("https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg");
+}
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 1rem;
+}
+.menu-icon {
+  width: 30px;
+  height: 4px;
+  background: #888;
+  display: block;
+  border-radius: 2px;
+  position: relative;
+}
+.menu-icon::before,
+.menu-icon::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 4px;
+  background: #888;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+.menu-icon::before {
+  top: -10px;
+}
+.menu-icon::after {
+  top: 10px;
+}
+
+.navbar-dropdown {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  right: 2rem;
+  background: rgba(30, 30, 30, 0.95);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  z-index: 100;
+}
+.navbar-dropdown.open {
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0.75rem 1rem;
+  }
+
+  .navbar-content {
+    flex-direction: row-reverse;
+  }
+
+  .ecell-logo {
+    height: 36px;
+    padding: 3px 6px;
+  }
+
+  .navbar-icons-container {
+    position: static;
+  }
+
+  .navbar-icons {
+    display: flex;
+    gap: 0.75rem;
+  }
+
+  .icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .toast-notification {
+    position: fixed;
+    right: 16px;
+    bottom: 180px;
+    top: auto;
+    margin: 0;
+    font-size: 1.2em;
+    text-align: right;
+  }
+}

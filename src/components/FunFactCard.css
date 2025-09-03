@@ -1,0 +1,110 @@
+.fun-fact-card {
+  background: rgba(30, 30, 30, 0.95);
+  color: #fff;
+  border-radius: 12px;
+  
+  padding: 1.5rem 2rem 1.5rem 1.5rem;
+  width: 320px;
+  height: 140px;
+  text-align: left;
+  position: fixed;
+  left: 32px;
+  bottom: 32px;
+  backdrop-filter: blur(10px);
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+}
+.light .fun-fact-card {
+  background: rgba(255, 255, 255, 0.95);
+  color: #222;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+}
+.card-title {
+  font-size: 1.4em;
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+  color: white);
+  
+  letter-spacing: 0.5px;
+  position: relative;
+  display: inline-block;
+}
+
+.card-title::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--accent-primary);
+  box-shadow: 0 0 10px var(--accent-primary);
+}
+
+.fact-text {
+  font-size: 1.1em;
+  margin: 0;
+  white-space: normal;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  line-height: 1.4;
+  flex: 1;
+}
+.next-fact-btn {
+  background: transparent;
+  border: none;
+  position: absolute;
+  top: 50%;
+  right: -32px;
+  transform: translateY(-50%);
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.next-fact-btn svg {
+  display: block;
+  width: 32px;
+  height: 32px;
+  filter: drop-shadow(0 0 6px #ff6a00);
+}
+.next-fact-btn:focus {
+  outline: none;
+}
+@media (max-width: 768px) {
+  .fun-fact-card {
+    left: 16px;
+    right: 16px;
+    bottom: 20px;
+    width: calc(100% - 32px);
+    height: auto;
+    min-height: 120px;
+    padding: 1rem;
+  }
+  .next-fact-btn {
+    right: -12px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .next-fact-btn svg {
+    width: 24px;
+    height: 24px;
+  }
+  .card-title {
+    font-size: 1.2em;
+    margin-bottom: 0.75rem;
+  }
+  .fact-text {
+    font-size: 1em;
+    line-height: 1.4;
+  }
+}
+@media (prefers-color-scheme: light) {
+  .fun-fact-card {
+    background: #fff;
+    color: #222;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  }
+}
