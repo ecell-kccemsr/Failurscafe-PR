@@ -1,8 +1,6 @@
 import React from "react";
 import { Navbar } from "./components/Navbar";
-import { LoaderBar } from "./components/LoaderBar";
 import { FunFactCard } from "./components/FunFactCard";
-import { GradientText } from "./components/GradientText";
 import { LightBulbs } from "./components/LightBulbs";
 
 import failursCafeLogoDark from "/failurscafelogo_dark.svg";
