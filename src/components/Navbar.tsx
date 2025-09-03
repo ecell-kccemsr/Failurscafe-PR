@@ -5,8 +5,8 @@ import ecellLogoDark from "/ecelllogo_dark.svg";
 import { Toast } from "./Toast";
 
 const socialLinks = [
-  { href: "https://instagram.com", icon: "instagram" },
-  { href: "https://linkedin.com", icon: "linkedin" },
+  { href: "https://www.instagram.com/kcecell_/", icon: "instagram" },
+  { href: "https://www.linkedin.com/in/kcecell/", icon: "linkedin" },
   { href: "https://wa.me", icon: "whatsapp" },
 ];
 
